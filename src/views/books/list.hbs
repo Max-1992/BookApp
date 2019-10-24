@@ -1,0 +1,22 @@
+<h1 class="mb-5">
+    My Favorite Books
+</h1>
+
+<div class="row mb-5">
+    {{#each books}}
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title h4 text-center">{{ title }}</h1>
+                    </div>
+                    <div class="card-body text-center"> 
+                        <p class="card-text">{{ description }}</p>
+                        <a href="/books/delete/{{_id}}" class="btn btn-danger btn-block">Deleted</a>
+                    </div>
+                    <div class="card-footer bg-primary">
+                        <p class="card-text"><span>ISBN: {{ isbn }} </span></p>
+                    </div>
+                </div>
+            </div>
+    {{/each}}
+</div>
